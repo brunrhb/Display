@@ -1,17 +1,17 @@
 .grid-container {
-    
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Modifiez cela pour contrôler le nombre d'éléments par ligne */
     grid-auto-rows: minmax(auto, 1fr);
     grid-gap: 10px;
     overflow-y: scroll;
     height: 100vh; /* Ajuster la hauteur à votre convenance */
 }
+
 h1,h2,h3,h4,h5,a,p{
     font-family: Arial, Helvetica, sans-serif;  
 }
+
 .grid-item {
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,24 +22,30 @@ h1,h2,h3,h4,h5,a,p{
     text-decoration: none;
     color: white;
 }
+
 .grid-item:hover > .animation{
     opacity: 1;
 }
+
 .grid-item:hover > .description{
     opacity: 0;
 }
+
 .animation{
     opacity: 0;
     position: absolute;
 }
+
 .description{
     opacity: 1;
     position: absolute;
 }
+
 .grid-item img {
     width: 100%;
     height: 100%;
 }
+
 @media (max-width: 680px) {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
