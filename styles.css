@@ -1,3 +1,25 @@
+body {
+    background-color: black;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#vidHeadContainer, #footerContainer {
+    width: 100%;
+    overflow: hidden;
+}
+
+#vidHead, #footer {
+    width: 100%;
+    position: relative;
+    top: -25%;
+}
+
+#headerText {
+    font-size: 1.5em;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -5,10 +27,13 @@
     grid-gap: 10px;
     overflow-y: scroll;
     height: 100vh; /* Ajuster la hauteur à votre convenance */
+    margin-top: -25%;
 }
+
 h1,h2,h3,h4,h5,a,p{
     font-family: Arial, Helvetica, sans-serif;  
 }
+
 .grid-item {
     display: flex;
     justify-content: center;
@@ -20,24 +45,30 @@ h1,h2,h3,h4,h5,a,p{
     text-decoration: none;
     color: white;
 }
+
 .grid-item:hover > .animation{
     opacity: 1;
 }
+
 .grid-item:hover > .description{
     opacity: 0;
 }
+
 .animation{
     opacity: 0;
     position: absolute;
 }
+
 .description{
     opacity: 1;
     position: absolute;
 }
+
 .grid-item img {
     width: 100%;
     height: 100%;
 }
+
 @media (max-width: 680px) {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
