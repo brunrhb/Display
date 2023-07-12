@@ -4,40 +4,37 @@
     <title>Grid CSS</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body style="background-color: black;">
+    <div id="vidHeadContainer" style="overflow: hidden; height: 75vh; position: relative;">
+        <video id="vidHead" style="height: 100%;" autoplay>
+            <source src="VID Head.mov" type="video/mp4">
+        </video>
+        <div id="blackLayer"></div>
+        <div id="gradientLayer"></div>
+        <h1 id="headerText">Keeping busy with my little projects</h1>
+    </div>
     <div class="grid-container">
         <a href="SKETCH1/index.html" class="grid-item">
             <img class="animation" src="./media/gifcats.gif" alt="Image">
             <img src="IMG_test.png" alt="Image">
-            <h1 class="description">cats</h1>
-            
+            <h1 class="description">SKETCH1</h1>
         </a>
-        <a href="SKETCH1/index.html" class="grid-item">
+        <a href="SKETCH2/index.html" class="grid-item">
             <img src="IMG_test.png" alt="Image">
+            <h1 class="description">SKETCH2</h1>
         </a>
-        <a href="SKETCH1/index.html" class="grid-item">
+        <a href="SKETCH3/index.html" class="grid-item">
             <img src="IMG_test.png" alt="Image">
+            <h1 class="description">SKETCH3</h1>
         </a>
-        <a href="SKETCH1/index.html" class="grid-item">
+        <a href="SKETCH4/index.html" class="grid-item">
             <img src="IMG_test.png" alt="Image">
-        </a>
-        <a href="SKETCH1/index.html" class="grid-item">
-            <img src="IMG_test.png" alt="Image">
-        </a>
-        <a href="SKETCH1/index.html" class="grid-item">
-            <img src="IMG_test.png" alt="Image">
-        </a>
-        <a href="SKETCH1/index.html" class="grid-item">
-            <img src="IMG_test.png" alt="Image">
-        </a>
-        <a href="SKETCH1/index.html" class="grid-item">
-            <img src="IMG_test.png" alt="Image">
-        </a>
-        <a href="SKETCH1/index.html" class="grid-item">
-            <img src="IMG_test.png" alt="Image">
+            <h1 class="description">SKETCH4</h1>
         </a>
     </div>
-
+    <div id="footerContainer">
+        <img id="footer" src="Footer.png">
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
