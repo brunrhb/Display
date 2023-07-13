@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <a id="back-link" href="../index.html" style="position: absolute; top: 10px; left: 10px; display: none;">BACK</a>
-    <main>
-    </main>
-    <script src="sketch.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .element2 {
+            font-size: 0.5em; 
+        }
+
+        .element4 {
+            font-weight: 200; 
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-item">
+        <p class="element1" id="itemNumber">#2</p> <!-- Element1 -->
+        <p class="element2" id="creationDate">jj-mm-yyyy</p> <!-- Element2 -->
+        <p class="element3">nom</p> <!-- Element3 -->
+        <p class="element4">description</p> <!-- Element4 -->
+    </div>
+    <script>
+        var nameSketch = "nom";
+        var descriptionSketch = "description";
+
+        var itemNumber = 2; // Nouvel élément ajouté
+        var itemNumberElement = document.getElementById('itemNumber');
+        itemNumberElement.textContent = "#" + itemNumber; // Nouvel élément ajouté
+
+        var creationDateElement = document.getElementById('creationDate');
+        var creationDate = new Date(); // Nouvel élément ajouté
+        var formattedDate = creationDate.getDate() + "-" + (creationDate.getMonth() + 1) + "-" + creationDate.getFullYear(); // Nouvel élément ajouté
+        creationDateElement.textContent = formattedDate; // Nouvel élément ajouté
+    </script>
+</body>
 </html>
