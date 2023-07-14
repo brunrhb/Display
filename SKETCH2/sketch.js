@@ -26,12 +26,12 @@ function mousePressed() {
 }
 
 window.onload = function() {
-  // Vérifiez si l'utilisateur vient de la page d'accueil
-  if (document.referrer.includes('index.html')) {
-      // Si oui, affichez le lien de retour
-      var backLink = document.createElement("a"); 
-      backLink.href = "index.html"; 
-      backLink.innerHTML = "Retour"; 
-      document.body.appendChild(backLink);
-  }
+  // Créez le lien de retour
+  var backLink = document.createElement("a"); 
+  backLink.href = "../index.html"; 
+  backLink.innerHTML = "Retour"; 
+  backLink.style.position = "absolute";
+  backLink.style.top = "10px";
+  backLink.style.left = "10px";
+  document.body.appendChild(backLink);
 }
