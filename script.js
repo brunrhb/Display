@@ -6,12 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = `SKETCH${index + 1}/index.html`;
         });
 
-        // Ajoute le numéro et la date de création à chaque élément de la grille
+        // Ajoute le numéro et la date de création à la description
+        const descriptionElement = item.querySelector('.description');
         const creationDate = new Date().toLocaleDateString('fr-FR');
-        const infoDiv = document.createElement('div');
-        infoDiv.className = 'info';
-        infoDiv.innerHTML = `${index + 1}<br>${creationDate}`;
-        item.appendChild(infoDiv);
+        descriptionElement.id = `description${index + 1}`;
+        descriptionElement.innerHTML = `${index + 1}<br>${creationDate}<br>${descriptionElement.innerHTML}`;
     });
 
     // Ajoute un gestionnaire d'événement pour faire défiler les frames de la vidéo lors du scroll
@@ -38,18 +37,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Définition des nouvelles valeurs
+    let txtNumero = 'LetxtNumero';
+    let txtDate = 'LetxtDate';
+
     // Fetch data from SKETCH1/ID.js and SKETCH2/ID.js and insert into the HTML elements
     fetch('SKETCH1/ID.js')
     .then(response => response.json())
     .then(data => {
-        const infoDiv1 = document.querySelector('#description1 .info');
-        infoDiv1.innerHTML += `<br>${data.txtNomSKETCH1}<br>${data.txtDescriptionSKETCH1}`;
+        document.getElementById('description1').innerHTML = `${data.txtNomSKETCH1}<br>${data.txtDescriptionSKETCH1}<br>{txtNumero}<br>${txtDate}`;
     });
 
     fetch('SKETCH2/ID.js')
     .then(response => response.json())
     .then(data => {
-        const infoDiv2 = document.querySelector('#description2 .info');
-        infoDiv2.innerHTML += `<br>${data.txtNomSKETCH2}<br>${data.txtDescriptionSKETCH2}`;
+        document.getElementById('description2').innerHTML = `${data.txtNomSKETCH2}<br>${data.txtDescriptionSKETCH2}<br>{txtNumero}<br>${txtDate}`;
     });
 });
