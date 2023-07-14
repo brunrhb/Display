@@ -1,38 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .element2 {
-            font-size: 0.5em; 
-        }
-
-        .element4 {
-            font-weight: 200; 
-        }
-    </style>
-</head>
-<body>
-    <div class="grid-item">
-        <p class="element1" id="itemNumber">#2</p> <!-- Element1 -->
-        <p class="element2" id="creationDate">jj-mm-yyyy</p> <!-- Element2 -->
-        <p class="element3">nom</p> <!-- Element3 -->
-        <p class="element4">description</p> <!-- Element4 -->
-    </div>
-    <script>
-        var nameSketch = "nom";
-        var descriptionSketch = "description";
-
-        var itemNumber = 2; // Nouvel élément ajouté
-        var itemNumberElement = document.getElementById('itemNumber');
-        itemNumberElement.textContent = "#" + itemNumber; // Nouvel élément ajouté
-
-        var creationDateElement = document.getElementById('creationDate');
-        var creationDate = new Date(); // Nouvel élément ajouté
-        var formattedDate = creationDate.getDate() + "-" + (creationDate.getMonth() + 1) + "-" + creationDate.getFullYear(); // Nouvel élément ajouté
-        creationDateElement.textContent = formattedDate; // Nouvel élément ajouté
-    </script>
-</body>
-</html>
+<!-- Modifiez le contenu du txtGroup de l'Item 2 -->
+<div class="txtGroup">
+  <div class="textElement">
+    #2 <!-- var numéro du sketch -->
+  </div>
+  <div class="textElement">
+    13-15-07-2023 <!-- date et heure de création -->
+  </div>
+  <div class="textElement">
+    nom <!-- var nameSketch -->
+  </div>
+  <div class="textElement">
+    description <!-- var descriptionSketch -->
+  </div>
+</div>
