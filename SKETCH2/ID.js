@@ -1,3 +1,3 @@
 
-let txtNom = 'Nom du sketch2'
-let txtDescription = 'Description du sketch2';
+let txtNomSKETCH2 = 'Nom du sketch2';
+let txtDescriptionSKETCH2 = 'Description du sketch2';
