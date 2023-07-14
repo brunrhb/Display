@@ -3,6 +3,7 @@ function setup() {
   createCanvas(400, 400);
   textAlign(CENTER, CENTER);
 }
+
 function draw() {
   background(255);
   noStroke();
@@ -14,6 +15,7 @@ function draw() {
     }
   }
 }
+
 function mousePressed() {
   let osc = new p5.Oscillator();
   osc.setType('square');
@@ -27,6 +29,9 @@ window.onload = function() {
   // Vérifiez si l'utilisateur vient de la page d'accueil
   if (document.referrer.includes('index.html')) {
       // Si oui, affichez le lien de retour
-      document.getElementById('back-link').style.display = 'block';
+      var backLink = document.createElement("a"); 
+      backLink.href = "index.html"; 
+      backLink.innerHTML = "Retour"; 
+      document.body.appendChild(backLink);
   }
 }
