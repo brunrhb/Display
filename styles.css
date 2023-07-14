@@ -71,7 +71,6 @@ h1,h2,h3,h4,h5,a,p{
     justify-content: center;
     align-items: center;
     background-color: #cdcaca;
-    object-fit: cover;
     cursor: pointer;
     position: relative;
     text-decoration: none;
@@ -99,6 +98,7 @@ h1,h2,h3,h4,h5,a,p{
 .grid-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Ajout de cette ligne */
 }
 
 @media (max-width: 680px) {
