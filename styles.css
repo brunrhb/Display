@@ -21,7 +21,7 @@ body {
 }
 
 #footerContainer {
-    background-color: rgba(0, 0, 0, 0.2); /* Ajoutez cette ligne */
+    background-color: rgba(0, 0, 0, 0.2);
     top: 0;
 }
 
@@ -108,5 +108,18 @@ h1,h2,h3,h4,h5,a,p{
 }
 
 #footerImg {
-    transition: transform 0.3s ease; /* Ajoutez cette ligne */
+    transition: transform 0.3s ease;
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.grid-item:hover .info {
+    display: none;
 }
