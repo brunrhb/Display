@@ -24,9 +24,9 @@ function mousePressed() {
 }
 
 window.onload = function() {
-    // Vérifiez si l'utilisateur vient de la page d'accueil
-    if (document.referrer.includes('index.html')) {
-        // Si oui, affichez le lien de retour
-        document.getElementById('back-link').style.display = 'block';
-    }
+  // Vérifiez si l'utilisateur vient de la page d'accueil
+  if (document.referrer.includes('index.html')) {
+      // Si oui, affichez le lien de retour
+      document.getElementById('back-link').style.display = 'block';
+  }
 }
