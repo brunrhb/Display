@@ -34,10 +34,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Définition des nouvelles valeurs
     let txtNumero = 'LetxtNumero';
     let txtDate = 'LetxtDate';
-    let txtNom = 'LetxtNom';
-    let txtDescription = 'LetextDescripton';
 
-    // Insertion des nouvelles valeurs dans les éléments HTML appropriés
-    document.getElementById('description1').innerHTML = `${txtNumero}<br>${txtDate}<br>${txtNom}<br>${txtDescription}`;
-    document.getElementById('description2').innerHTML = `${txtNumero}<br>${txtDate}<br>${txtNom}<br>${txtDescription}`;
+      // Fetch data from SKETCH1/ID.js and SKETCH2/ID.js and insert into the HTML elements
+      fetch('SKETCH1/ID.js')
+      .then(response => response.json())
+      .then(data => {
+          document.getElementById('description1').innerHTML = `${data.txtNomSKETCH1}<br>${data.txtDescriptionSKETCH1}<br>{txtNumero}<br>${txtDate}`;
+      });
+  
+      fetch('SKETCH2/ID.js')
+      .then(response => response.json())
+      .then(data => {
+          document.getElementById('description2').innerHTML = `${data.txtNomSKETCH2}<br>${data.txtDescriptionSKETCH2}<br>{txtNumero}<br>${txtDate}`;
+      });
+
+
 });
