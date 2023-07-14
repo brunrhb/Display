@@ -1,3 +1,3 @@
 
-let txtNomSKETCH2 = 'Nom du sketch2';
-let txtDescriptionSKETCH2 = 'Description du sketch2';
+let txtNomSKETCH2 = 'Oui, mais';
+let txtDescriptionSKETCH2 = 'En fait non';
