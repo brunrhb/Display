@@ -37,20 +37,24 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Définition des nouvelles valeurs
-    let txtNumero = 'LetxtNumero';
-    let txtDate = 'LetxtDate';
-
     // Fetch data from SKETCH1/ID.js and SKETCH2/ID.js and insert into the HTML elements
     fetch('SKETCH1/ID.js')
-    .then(response => response.json())
+    .then(response => response.text())
     .then(data => {
-        document.getElementById('description1').innerHTML = `${data.txtNomSKETCH1}<br>${data.txtDescriptionSKETCH1}<br>{txtNumero}<br>${txtDate}`;
+        eval(data);
+        const description1 = document.getElementById('description1');
+        if (description1) {
+            description1.innerHTML += `<br>${txtNomSKETCH1}<br>${txtDescriptionSKETCH1}`;
+        }
     });
 
     fetch('SKETCH2/ID.js')
-    .then(response => response.json())
+    .then(response => response.text())
     .then(data => {
-        document.getElementById('description2').innerHTML = `${data.txtNomSKETCH2}<br>${data.txtDescriptionSKETCH2}<br>{txtNumero}<br>${txtDate}`;
+        eval(data);
+        const description2 = document.getElementById('description2');
+        if (description2) {
+            description2.innerHTML += `<br>${txtNomSKETCH2}<br>${txtDescriptionSKETCH2}`;
+        }
     });
 });
