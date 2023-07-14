@@ -98,7 +98,7 @@ h1,h2,h3,h4,h5,a,p{
 .grid-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajout de cette ligne */
+    object-fit: cover;
 }
 
 @media (max-width: 680px) {
@@ -122,4 +122,32 @@ h1,h2,h3,h4,h5,a,p{
 
 .grid-item:hover .info {
     display: none;
+}
+
+#txtNumero {
+    font-family: 'Helvetica';
+    font-weight: 900;
+    font-size: calc(100vh / 8);
+    color: #ffffff;
+}
+
+ #txtNom {
+    font-family: 'Helvetica';
+    font-weight: 500;
+    font-size: calc((100vh / 8) / 4);
+    color: #ffffff;
+}
+
+#txtDate {
+    font-family: 'Helvetica';
+    font-weight: 500;
+    font-size: calc((100vh / 8) / 6);
+    color: #ffffff;
+}
+
+#txtDescription {
+    font-family: 'Helvetica';
+    font-weight: 100;
+    font-size: calc((100vh / 8) / 4);
+    color: #ffffff;
 }
