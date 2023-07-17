@@ -1,17 +1,35 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Ajoute un gestionnaire d'événement sur chaque élément de la grille
-    const gridItems = document.querySelectorAll('.grid-item');
-    gridItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            window.location.href = `SKETCH${index + 1}/index.html`;
-        });
+    // Récupère les dates de création du serveur
+    fetch('http://www.display.brunr.com/get-dates')
+        .then(response => response.json())
+        .then(creationDates => {
+            // Ajoute un gestionnaire d'événement sur chaque élément de la grille
+            const gridItems = document.querySelectorAll('.grid-item');
+            gridItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    window.location.href = `SKETCH${index + 1}/index.html`;
+                });
 
-        // Ajoute le numéro et la date de création à la description
-        const descriptionElement = item.querySelector('.description');
-        const creationDate = new Date().toLocaleDateString('fr-FR');
-        descriptionElement.id = `description${index + 1}`;
-        descriptionElement.innerHTML = `<span id=\"txtNumero\">${index + 1}</span><br><span id=\"txtDate\">${creationDate}</span><br>${descriptionElement.innerHTML}`;
-    });
+                // Ajoute le numéro et la date de création à la description
+                const descriptionElement = item.querySelector('.description');
+                const creationDate = creationDates[`description${index + 1}`];
+                if (!creationDate) {
+                    fetch('http://www.display.brunr.com/save-date', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ index: index + 1 }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.message);
+                    });
+                }
+                descriptionElement.id = `description${index + 1}`;
+                descriptionElement.innerHTML = `<span id=\"txtNumero\">${index + 1}</span><br><span id=\"txtDate\">${creationDate}</span><br>${descriptionElement.innerHTML}`;
+            });
+        });
 
     // Ajoute un gestionnaire d'événement pour faire défiler les frames de la vidéo lors du scroll
     const vidHead = document.getElementById('vidHead');
