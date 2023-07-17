@@ -146,16 +146,10 @@ h1,h2,h3,h4,h5,a,p{
     color: #ffffff;
 }
 
-#txtDate {
-    font-family: 'Helvetica';
-    font-weight: 500;
-    font-size: calc((100vh / 8) / 6);
-    color: #ffffff;
-}
 
 #txtDescription {
     font-family: 'Helvetica';
-    font-weight: 100;
+    font-weight: 60;
     font-size: calc((100vh / 8) / 4);
     color: #ffffff;
 }

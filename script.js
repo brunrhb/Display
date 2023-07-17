@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = `SKETCH${index + 1}/index.html`;
         });
 
-        // Ajoute le numéro et la date de création à la description
+        // Ajoute le numéro  à la description
         const descriptionElement = item.querySelector('.description');
         descriptionElement.id = `description${index + 1}`;
         descriptionElement.innerHTML = `<span id=\"txtNumero\">${index + 1}</span><br>${descriptionElement.innerHTML}`;
