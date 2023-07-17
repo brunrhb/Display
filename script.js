@@ -8,9 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Ajoute le numéro et la date de création à la description
         const descriptionElement = item.querySelector('.description');
-        const creationDate = new Date().toLocaleDateString('fr-FR');
         descriptionElement.id = `description${index + 1}`;
-        descriptionElement.innerHTML = `<span id=\"txtNumero\">${index + 1}</span><br><span id=\"txtDate\">${creationDate}</span><br>${descriptionElement.innerHTML}`;
+        descriptionElement.innerHTML = `<span id=\"txtNumero\">${index + 1}</span><br>${descriptionElement.innerHTML}`;
     });
 
     // Ajoute un gestionnaire d'événement pour faire défiler les frames de la vidéo lors du scroll
