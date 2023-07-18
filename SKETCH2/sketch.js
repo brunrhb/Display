@@ -1,5 +1,6 @@
 let prevMouseX = 0;
 let prevMouseY = 0;
+let NonNon = 'Non'
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -20,7 +21,9 @@ function drawText() {
     text('Oui', mouseX, mouseY);
   } else {
     textSize((windowWidth/windowHeight)*60);
-    text('Non', mouseX + randomGaussian(-1, 1), mouseY + randomGaussian(-5, 5));
+    text(NonNon, 
+      mouseX + randomGaussian(-(textWidth(NonNon)/10)*2, -textWidth(NonNon)/10-textWidth(NonNon)/10), 
+      mouseY + randomGaussian(-5, 5));
   }
 }
 
