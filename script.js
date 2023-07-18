@@ -44,4 +44,15 @@ document.addEventListener("DOMContentLoaded", function() {
             description2.innerHTML += `<br><span id=\"txtNom\">${txtNomSKETCH2}</span><br><span id=\"txtDescription\">${txtDescriptionSKETCH2}</span>`;
         }
     });
+
+
+    fetch('SKETCH3/ID.js')
+    .then(response => response.text())
+    .then(data => {
+        eval(data);
+        const description3 = document.getElementById('description3');
+        if (description3) {
+            description3.innerHTML += `<br><span id=\"txtNom\">${txtNomSKETCH3}</span><br><span id=\"txtDescription\">${txtDescriptionSKETCH3}</span>`;
+        }
+    });
 });
