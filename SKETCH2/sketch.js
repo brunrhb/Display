@@ -16,11 +16,11 @@ function draw() {
 
 function drawText() {
   if (mouseX === prevMouseX && mouseY === prevMouseY) {
-    textSize(15);
+    textSize((windowWidth/windowHeight)*50);
     text('Oui', mouseX, mouseY);
   } else {
-    textSize(randomGaussian(20));
-    text('Non', mouseX + randomGaussian(-0,2, 0,2), mouseY + randomGaussian(-0,2, 0,2));
+    textSize((windowWidth/windowHeight)*60);
+    text('Non', mouseX + randomGaussian(-1, 1), mouseY + randomGaussian(-5, 5));
   }
 }
 
