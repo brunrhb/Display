@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", async function() {
       });
     }
   
-    // Fetch data from SKETCH1/ID.js, SKETCH2/ID.js, and SKETCH3/ID.js and insert into the HTML elements
-    const sketches = [1, 2, 3];
+    // Fetch data from ID.js and insert into the HTML elements
+    const sketches = [1, 2, 3, 4];
     for (let i of sketches) {
       try {
         const response = await fetch(`SKETCH${i}/ID.js`);
