@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
   
     // Fetch data from ID.js and insert into the HTML elements
-    const sketches = [1, 2, 3, 4];
+    const sketches = [1, 2, 3, 4, 5];
     for (let i of sketches) {
       try {
         const response = await fetch(`SKETCH${i}/ID.js`);
