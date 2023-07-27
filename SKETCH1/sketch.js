@@ -6,8 +6,11 @@ function setup() {
 
 function draw() {
   background(220);
-  textSize (randomGaussian (windowWidth/windowHeight)*30+(windowWidth/30),(windowWidth/windowHeight)*30+(windowWidth/25));   
-  text (txtContent, mouseX+ randomGaussian(-7, 1), mouseY+randomGaussian(3,10));
+
+  
+textSize(randomGaussian(3, 10))  
+text ('Non', mouseX+ randomGaussian(3, 10), mouseY+randomGaussian(3,10));
+
 }
 
 window.onload = function() {

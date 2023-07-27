@@ -42,3 +42,14 @@ function mouseMoved() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
+window.onload = function() {
+  // Créez le lien de retour
+  var backLink = document.createElement("a"); 
+  backLink.href = "../index.html"; 
+  backLink.innerHTML = "Retour"; 
+  backLink.style.position = "absolute";
+  backLink.style.top = "10px";
+  backLink.style.left = "10px";
+  document.body.appendChild(backLink);
+}
