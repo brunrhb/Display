@@ -7,6 +7,8 @@ function setup() {
   textSize(30);
 }
 
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
+
 function draw() {
   background(220);
   fill(0);

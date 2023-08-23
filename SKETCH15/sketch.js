@@ -8,6 +8,8 @@ function setup() {
       background(220);
       frameRate (0.75) }
 
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
+
 function draw() {
 MiseEnPage() 
 text (jai, windowWidth/2, 70 )

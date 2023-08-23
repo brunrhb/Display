@@ -13,6 +13,8 @@ function setup() {
   textSize(32);
 }
 
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
+
 function draw() {
   background(220);
   let margin = 20;

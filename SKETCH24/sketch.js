@@ -21,6 +21,8 @@ function setup() {
     });
 }
 
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
+
 function draw() {
   MiseEnPage();
   RepEff();

@@ -21,6 +21,7 @@ function setup() {
   frameRate(6);
   textSize(size);
 }
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
 
 function draw() {
   MiseEnPage();

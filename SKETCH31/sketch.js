@@ -51,7 +51,7 @@ if (textWidth(wordArray[i]) > width * 2){
       size = 1; acc = 1 ; opacity = 200; y = height / 2;  i = i+1 } }
 
 
-      window.onload = function() {
+window.onload = function() {
         // Créez le lien de retour
         var backLink = document.createElement("a"); 
         backLink.href = "../index.html"; 

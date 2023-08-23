@@ -16,6 +16,8 @@ function setup() {
   button.mousePressed(resetSimulation);
 }
 
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
+
 function draw() {
   background(220);
   text(displayText1, windowWidth / 2, windowHeight / 4);

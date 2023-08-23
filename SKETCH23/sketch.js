@@ -12,6 +12,8 @@ function setup(haha) {
   noStroke();
 }
 
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
+
 function draw() {
 
   background(0, 0, 0, 30);

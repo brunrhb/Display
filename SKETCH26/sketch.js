@@ -17,6 +17,8 @@ function setup() {
   up = 0; // Initialize the 'up' variable
 }
 
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
+
 function draw() {
   background(220);
 

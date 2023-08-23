@@ -8,6 +8,8 @@ function setup() {
   textAlign(CENTER);
 }
 
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
+
 function draw() {
   background(220);
 

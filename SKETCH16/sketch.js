@@ -8,7 +8,9 @@ let size = 8;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(0.75);
-  textSize(30);
+  textSize(30)
+  
+
 
   // Charger les instructions depuis le fichier texte et découper en mots
   fetch('Instructions pour monter un escalier.txt')
@@ -21,6 +23,7 @@ function setup() {
       console.error('Une erreur s\'est produite lors du chargement du fichier :', error);
     });
 }
+function windowResized() {resizeCanvas(windowWidth, windowHeight);}
 
 function draw() {
   MiseEnPage();
